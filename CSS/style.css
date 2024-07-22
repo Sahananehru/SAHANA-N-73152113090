@@ -1,0 +1,10 @@
+.MyHeading2
+{
+    margin:30px;
+    border: 2px solid violet;
+                text-align: center;
+                width: 50%;
+                color: violet;
+                background-color: darkblue;
+                cursor:pointer;
+}
