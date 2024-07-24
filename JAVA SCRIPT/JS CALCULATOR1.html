@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97.5vh;
+            background-image: url(CalculatorBackground.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgb(139, 127, 127) 0px 2px 4px 0px,grey 0px 2px 16px 0px;
+            background-color: #0c0c0c;
+            backdrop-filter: blur(10.6px);
+            border: 1px solid rgba(21, 21, 21, 0.35);
+        }
+        .Display {
+            background-color: rgb(247, 242, 242);
+            border: 1px solid #0c0c0c;
+            margin-bottom: 10px;
+            font-size: 10px;
+            height: 70px;
+            border-radius: 8px;
+            
+        }
+        input{
+            background-color: transparent;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            font-size: x-large;
+            padding-top: 20px;
+            width: 90%;
+        }
+        .nums {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        button{
+            padding: 15px;
+            font-size: 1.2em;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Display">
+            <input type="text" id="displaybox" placeholder="0">
+        </div>
+        <div class="nums">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="val('%')">%</button>
+            <button onclick="del()"><-</button>
+            <button onclick="val('/')">/</button>
+            <button onclick="val('7')">7</button>
+            <button onclick="val('8')">8</button>
+            <button onclick="val('9')">9</button>
+            <button onclick="val('*')">x</button>
+            <button onclick="val('4')">4</button>
+            <button onclick="val('5')">5</button>
+            <button onclick="val('6')">6</button>
+            <button onclick="val('-')">-</button>
+            <button onclick="val('1')">1</button>
+            <button onclick="val('2')">2</button>
+            <button onclick="val('3')">3</button>
+            <button onclick="val('+')">+</button>
+            <button onclick="val('00')">00</button>
+            <button onclick="val('0')">0</button>
+            <button onclick="val('.')">.</button>
+            <button onclick="answers()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function clearDisplay(){
+            document.getElementById("displaybox").value="0";
+        }
+        function val(value)
+        {
+            var displaybox=document.getElementById("displaybox")
+            if(displaybox.value==="0")
+            {
+                displaybox.value=value;
+            }
+            else
+            {
+                displaybox.value+=value;
+            }
+        }
+        function del(){
+            var displaybox=document.getElementById("displaybox")
+            displaybox.value=displaybox.value.slice(0,-1)
+            if(displaybox.value==="0")
+            {
+                displaybox.value="0"
+            }
+        }
+        function answers(){
+            try 
+            {
+                let answer = eval(document.getElementById("displaybox").value);
+                document.getElementById("displaybox").value = answer;
+            } 
+            catch (error) 
+            {
+                if (error instanceof SyntaxError) 
+                {
+                    document.getElementById("displaybox").value = 'Syntax Error';
+                } 
+                else 
+                {
+                    document.getElementById("displaybox").value = 'Error: ' + error.message;
+                }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
