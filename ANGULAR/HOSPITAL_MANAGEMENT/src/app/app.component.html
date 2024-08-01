@@ -3,59 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management System</title>
+    <title>Document</title>
     <link rel="stylesheet" href="app.component.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<style>
-  a{
-    color:white;
-  }
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link src="stylesheet" href="app.component.css">
 </head>
 <body>
+    <div class="main">
     <header>
-        <div class="container">
-          <div class="logo">
-            <img src="https://sahanaclothing.com/assets/img/sahana-logo.png?1677302844">
-          </div>
-            <h1>Hospital Management System</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://www.google.co.in/maps/place/Apollo+Speciality+Hospitals/@10.8070322,78.5710541,12z/data=!4m10!1m2!2m1!1sappolo+hospital!3m6!1s0x3baaf506a2accc6b:0x2d7977fac779dfa6!8m2!3d10.8070322!4d78.7111298!15sCg9hcG9sbG8gaG9zcGl0YWySARBwcml2YXRlX2hvc3BpdGFs4AEA!16s%2Fg%2F11b5qytmh9?entry=ttu"> <i class='bx bx-location-plus'></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <h1>HOSPITAL MANAGEMENT SYSYTEM</h1>
     </header>
-    <main>
-        <section id="home">
-            <div class="container">
-                <h2>Welcome to Our Hospital</h2>
-                <button class="btn" ><a href="/ANGULAR/HOSPITAL_MANAGEMENT/Login.html">Book Appointment</a></button>
-                <button>Learn More</button>
-                </div>
-        </section>
-        <section id="services">
-            <div class="container">
-                <h2>Services</h2>
-                <div class="service">
-                    <button>Emergency Care</button>
-                    <p>24/7 emergency services for critical cases.</p>
-                </div>
-                <div class="service">
-                    <button>Services towards patient</button>
-                    <p>Consultations and treatments for inpatients.</p>
-                </div>
-                <div class="service">
-                    <button>Specialist Doctors</button>
-                    <p>Comfortable and specialized care for inpatients.</p>
-                </div> 
-            </div>
-        </section>
-    </main>
+    <div id="container" class="d-flex justify-content-center">
+        
+        <div id="left-content" class="col-6">
+        <h3>PATIENT DETAILS</h3>
+        <hr>
+      <p>ID  <input type="text" class="ms-2"></p>
+      <P>PHONE NO:<input type="text" class="ms-2"></P>
+      <p>PATIENT NAME:<input type="text" class="ms-2"></p>
+      <p>PATITENT AGE<input type="text" class="ms-2"></p>
+      <hr>
+      <button type="submit" class="btn btn-success ms-2">SAVE</button>
+    <button type="update" class="btn btn-primary ms-2">UPDATE</button>
+    <button type="delete" class="btn btn-info ms-2">DELETE</button>
+    <button type="find" class="btn btn-danger ms-2">FIND</button>
+    <button type="findall" class="btn btn-warning ms-2">FINDALL</button>
+
+    </div>
+    <div id="right-content" class="col-4">
+        <h3>TASK SHEET</h3>
+        <hr>
+        <p><b>ID:</b>101,<b>PHONE NO:</b>6534623542,<b>NAME:</b>SAHANA,<b>AGE:</b>20</p><hr>
+        <p><b>ID:</b>102,<b>PHONE NO:</b>3736388542,<b>NAME:</b>SHANMATHI,<b>AGE:</b>22</p><hr>
+        <p><b>ID:</b>103,<b>PHONE NO:</b>8263372242,<b>NAME:</b>KUMAR,<b>AGE:</b>23</p>   <hr>
+    </div>
+    </div>
+</div>
+    <!-- <div class="container">
+        <div class="left-content">
+        <h3>PATIENT DETAILS</h3>
+      <p>ID <input type="text"></p>
+      <P>PHONE NO:<input type="text"></P>
+      <p>PATITENT AGE<input type="text"></p>
+      <button type="submit" class="btn btn-success ms-2">SAVE</button>
+    <button type="update" class="btn btn-primary ms-2">UPDATE</button>
+    <button type="delete" class="btn btn-info ms-2">DELETE</button>
+    </div>
+    <div class="right-content">
+        <h3>TASK SHEET</h3>
+        <hr>
+        <p><b>ID:</b>101,<b>PHONE NO:</b>6534623542,<b>AGE:</b>20</p>
+        <p><b>ID:</b>101,<b>PHONE NO:</b>6534623542,<b>AGE:</b>20</p>
+        <p><b>ID:</b>101,<b>PHONE NO:</b>6534623542,<b>AGE:</b>20</p>   
+    </div>
+    </div> -->
 </body>
 </html>
